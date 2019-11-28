@@ -18,7 +18,7 @@
  }
  .d1 {
 	max-width:1600px;
-	min-width:1300px;
+	min-width:1600px;
 	background:black; color:#fff;
 	margin:0 auto;
 	margin-top:10px;
@@ -30,7 +30,7 @@
 	margin-right:70px;
   color:#fff;
  }
- .d1 > ul > li > a {
+ ul > li > a {
   color:#fff;
  }
  .li1 {
@@ -93,6 +93,9 @@
   font-weight:600;
   padding:10px 20px 10px 20px;
   margin-top:100px;
+}
+.sp1 > a{
+  color:#fff;
 }
 .sp1 > a:visited{
   color:#fff;
