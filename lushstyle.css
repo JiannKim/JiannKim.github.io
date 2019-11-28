@@ -30,6 +30,9 @@
 	margin-right:70px;
   color:#fff;
  }
+ .d1 > ul > li > a {
+  color:#fff;
+ }
  .li1 {
 	font-size:22px;
 	text-align:center;
