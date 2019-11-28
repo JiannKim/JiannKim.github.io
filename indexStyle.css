@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.5fr auto 50px 0.1fr -webkit-min-content 70px 55px 0.5fr;
+  grid-template-columns: 0.5fr auto 50px 0.1fr min-content 70px 55px 0.5fr;
+  grid-template-rows: 10px 90px -webkit-min-content -webkit-min-content 170px -webkit-min-content auto auto auto -webkit-min-content 100px;
+  grid-template-rows: 10px 90px min-content min-content 170px min-content auto auto auto min-content 100px;
+}
+
+.red-line {
+  background: red;
+}
+
+.red-line--oriz {
+  grid-row: 3;
+  grid-column: 1/7;
+  height: 10px;
+}
+
+.red-line--vertic {
+  grid-row: 5/10;
+  grid-column: 2;
+  width: 10px;
+}
+
+h1 {
+  font-size: 2.4em;
+}
+
+.h1-oriz {
+  grid-row: 4;
+  grid-column: 4/7;
+  text-align: right;
+}
+
+.h1-vertic {
+  grid-row: 5/9;
+  grid-column: 3;
+  -webkit-writing-mode: vertical-lr;
+  -webkit-transform: rotateZ(-180deg);
+          transform: rotateZ(-180deg);
+  align-self: start;
+  justify-self: start;
+}
+
+span {
+  grid-row: 6;
+  grid-column: 5;
+  text-align: right;
+  font-size: 1.2em;
+}
+
+h2 {
+  grid-row: 7;
+  grid-column: 5;
+  text-align: right;
+}
+h2 > a{
+  list-style: none;
+  color:#000;
+  text-decoration: none;
+}
+h2 > a:hover{
+  color:#7fff00;
+}
+
+.p-vertic {
+  grid-row: 2/7;
+  grid-column: 7;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  align-self: end;
+  justify-self: end;
+  font-size: 0.7em;
+}
+
+.list {
+  box-sizing: border-box;
+  width: 96%;
+  grid-row: 9;
+  grid-column: 6/8;
+  border-right: 7px solid #000;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  font-weight: 900;
+  font-size: 0.65em;
+}
