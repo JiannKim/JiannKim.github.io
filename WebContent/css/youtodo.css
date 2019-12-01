@@ -1,0 +1,80 @@
+* {
+  color: rgb(216, 209, 209);
+}
+
+body {
+  background-image: url("../imgs/diary1.png");
+  width: 100%;
+}
+.pusher a{
+  margin: 30px;
+}
+header .title {
+  text-align: center;
+  margin: 100px;
+}
+/* 햄버거버튼 시작부분 */
+.menu-toggle,
+.menu-toggle span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+.menu-toggle {
+  position: relative;
+  width: 50px;
+  height: 44px;
+}
+.menu-toggle span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: rgb(233, 77, 253);
+}
+.menu-toggle span:nth-of-type(1) {
+  top: 0;
+}
+.menu-toggle span:nth-of-type(2) {
+  top: 20px;
+}
+.menu-toggle span:nth-of-type(3) {
+  bottom: 0;
+}
+/*효과실행부분*/
+.menu-toggle.active span:nth-of-type(1) {
+  -webkit-transform: translateY(20px) rotate(-45deg);
+  transform: translateY(20px) rotate(-45deg);
+  }
+.menu-toggle.active span:nth-of-type(2) {
+  left: 50%;
+  opacity: 0;
+  -webkit-animation: active-menu05-bar02 .8s forwards;
+  animation: active-menu05-bar02 .8s forwards;
+  }
+@-webkit-keyframes active-menu05-bar02 {
+  100% {
+    height: 0;
+  }
+}
+@keyframes active-menu05-bar02 {
+  100% {
+    height: 0;
+  }
+}
+.menu-toggle.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-20px) rotate(45deg);
+  transform: translateY(-20px) rotate(45deg);
+}
+/* 햄버거버튼 끝부분 */
+
+.list .list-todo {
+  text-decoration: none;
+  margin: 0 auto;
+  width: 200px;
+  margin-top: 10px;
+}
+.list h4 {
+  margin:50px;
+  text-align: center;
+}
