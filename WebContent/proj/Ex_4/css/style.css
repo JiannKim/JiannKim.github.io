@@ -1,0 +1,115 @@
+/*----------------------*/
+* {margin:0;padding:0;}
+/* li{list-style-type:none;} */
+img,fieldset{border:0;}
+table{border-collapse:collapse;}
+table,th,td{border:1px solid #000;}
+.h{font-size:0;line-height:0;width:0;height:0;position:absolute;left:-9999px;}
+body{font:12px "Arial"; background:url(img/bg_grid.gif);}
+a {color: teal;}
+/*----------------------*/
+
+/* body {
+    background-image: url(../img/bg_grid.gif);
+    background-color: lightseagreen;
+} */
+
+#wrapper {
+    /* border: 1px solid red; */
+    /* background-color: white;
+    opacity: 0.7; */
+    /* 배경 반투명 */
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    width: 1000px;
+    height: 780px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 3px;
+}
+#container {
+    margin-top: 30px;
+}
+.content {
+    /* border: 1px solid orange; */
+    width: 760px;
+    height: 590px;
+    float: left;
+    line-height: 17px;
+}
+
+.content h2 {
+    /* border: 1px solid yellow; */
+    color: teal;
+}
+.blueberry {
+    display: grid;
+    border: 1px dashed white;
+    background-color: teal;
+    width: 565px;
+    height: 70px;
+    position: relative;
+    margin: 0 auto;
+    padding: 25px 25px 20px 80px;
+    color: white;
+}
+.blueberry img {
+    float: left;
+    z-index: 1;
+    display: grid;
+    position: absolute;
+    left: 8px;
+    top: 5px;
+}
+.jlist {
+    /* border: 1px solid blue; */
+    width: 250px;
+    margin-left: 30px
+}
+.jlist li a {
+    line-height: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.aside {
+    border: 1px solid teal;
+    display: grid;
+    position: relative;
+    left: 40px;
+    width: 200px;
+    height: 630px;
+    text-align: center;
+}
+.aside h2 {
+    /* border: 1px solid purple; */
+    background-image: url(../img/cocktail.gif);
+    height: 55px;
+    padding-top: 10px;
+}
+.aside dl {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 40px;
+    font-size: 10px;
+}
+dl img {
+    margin: 10px;
+}
+.lemon, .chai, .black {
+    color: red;
+    font-weight: bold;
+    line-height: 3px;
+}
+.join {
+    /* border: 1px solid gray; */
+    height: 30px;
+    font-size: 10px;
+    position: absolute;
+    top: 600px;
+}
+
+#footer {
+    /* border: 1px solid black; */
+    text-align: center;
+    margin-top: 10px;
+}
