@@ -1,0 +1,127 @@
+ /*jamongjamongjamongjamongjamong*/
+  .chats .chat {
+   list-style: none;
+ }
+ /*
+ .chats__list {
+   padding: 0;
+   margin: 0;
+ } */
+ /* .friend__column .chat__timestamp {
+   font-size: 12px;
+ } */
+ /*jamongjamongjamongjamongjamong*/
+
+ /* 추가 */
+ /*jamongjamongjamongjamongjamong*/
+ 
+ /* 이름검색 박스 */
+ .friend__search-box input {
+  outline: none;
+  opacity: 0.5;
+  border: 1.5px solid #555;
+  border-radius: 20px;
+  width: 300px;
+  height: 30px;
+  padding: 10px;
+  /* margin-bottom: 30px; */
+ }
+ .friends .friend__search {
+/*     border-top: 1px solid #f7f7f7; */
+    /* width: 100%; */
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    }
+
+ .friends__title {
+  font-size: 15px;
+  font-weight:500;
+  opacity: 0.5;
+}
+ .friend__name {
+  font-size: 16px;
+  opacity: 0.8;
+ }
+ /*jamongjamongjamongjamongjamong*/
+
+ .friend {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .friend .friend__avatar {
+    width: 50px;
+    border-radius: 38%;
+  }
+  
+  .friend__avatar.g-avatar {
+    width: 70px;
+  }
+
+  .friend__avatar.m-avatar {
+    width: 60px;
+  }
+
+  .friend .friend__column {
+    display: flex;
+    align-items: center;
+  }
+
+  .friend .friend__avatar {
+    margin-right: 15px;
+  }
+
+  .friend__content .friend__name {
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  .friend__content .friend__status,
+  .friend__content .friend__bottom-text,
+  .friend .chat__timestamp {
+    opacity: 0.5;
+  }
+
+  .friend__content .friend__bottom-text {
+    font-size: 14px;
+  }
+  
+  .friend__content .friend__status,
+  .friend .chat__timestamp {
+    font-size: 12px;
+  }
+  
+  .friend .friend__now-listening {
+    border: 2px solid #52e084;
+    border-radius: 20px;
+    padding: 5px 13px;
+    font-size: 13px;
+  }
+  
+  .friend__now-listening span {
+    opacity: 0.7;
+  }
+  
+  .friend__now-listening img {
+    width: 10px;
+    height: 15px;
+    padding-top: 4px;
+  }
+/* 
+  .friend__now-listening i {
+    font-size: 11px;
+    padding-left: 3px;
+  }
+   */
+  /*
+  
+  
+  .friend__add-btn {
+    display: flex;
+    padding: 10px 15px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+  } */

@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    /* margin-bottom: 50px; */
+    margin-bottom: 20px; /* 수정함(이름검색박스때문에) */
+}
+
+.header__title {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.header__icon {
+    margin-left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.header .i {
+    width: 25px;
+    align-items: center;
+    position: absolute;
+    left: -14px;
+    top: 5px;
+}
