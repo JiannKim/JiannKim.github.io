@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<!-- 로컬 CSS Import -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+
 <body>
-	<a href="list">홈으로</a><br>
+	<a href="index.html">홈으로</a><br>
 	<form action="modifyMemberSizeSave" method="post">
-	<input type="hidden" value="${memberSize.memberNo }" name="memberNo">
+		<input type="hidden" value="${memberSize.memberNo }" name="memberNo">
 		성함 : <input type="text" placeholder="윤승재" name="memberName" value="윤승재"><br>
 		연락처 : <input type="text" placeholder="010-9394-3588" name="memberPhone" value="010-9394-3588"><br>
-		소속팀 : 
+		소속팀 :
 		<select name="teamNo">
-				<option value="teamNo">임학 팀</option>
-				<option value="teamNo">부평 팀</option>
-				<option value="teamNo">계양 팀</option>
-				<option value="teamNo">문학 팀</option>
-				<option value="teamNo">남양 팀</option>
+			<option value="teamNo">임학 팀</option>
+			<option value="teamNo">부평 팀</option>
+			<option value="teamNo">계양 팀</option>
+			<option value="teamNo">문학 팀</option>
+			<option value="teamNo">남양 팀</option>
 		</select>
 		<br>
-		Middle finger reverse : <input type="text" name="middleFingerReverse" placeholder="middleFingerReverse" value="middleFingerReverse"><br>
-		Ring finger reverse : <input type="text" name="ringFingerReverse" placeholder="ringFingerReverse" value="ringFingerReverse"><br>
-		Middle finger left : <input type="text" name="middleFingerLeft" placeholder="middleFingerLeft" value="middleFingerLeft"><br>
-		Ring finger right : <input type="text" name="ringFingerRight" placeholder="ringFingerRight" value="ringFingerRight"><br>
+		Middle finger reverse : <input type="text" name="middleFingerReverse" placeholder="middleFingerReverse"
+			value="middleFingerReverse"><br>
+		Ring finger reverse : <input type="text" name="ringFingerReverse" placeholder="ringFingerReverse"
+			value="ringFingerReverse"><br>
+		Middle finger left : <input type="text" name="middleFingerLeft" placeholder="middleFingerLeft"
+			value="middleFingerLeft"><br>
+		Ring finger right : <input type="text" name="ringFingerRight" placeholder="ringFingerRight"
+			value="ringFingerRight"><br>
 		Insert 1 : <input type="text" name="insert1" placeholder="insert1" value="insert1"><br>
 		Insert 2 : <input type="text" name="insert2" placeholder="insert2" value="insert2"><br>
-		Middle finger forward : <input type="text" name="middleFingerForward" placeholder="middleFingerForward" value="middleFingerForward"><br>
-		Ring finger forward : <input type="text" name="ringFingerForward" placeholder="ringFingerForward" value="ringFingerForward"><br>
+		Middle finger forward : <input type="text" name="middleFingerForward" placeholder="middleFingerForward"
+			value="middleFingerForward"><br>
+		Ring finger forward : <input type="text" name="ringFingerForward" placeholder="ringFingerForward"
+			value="ringFingerForward"><br>
 		Span1 : <input type="text" name="span1" placeholder="span1" value="span1"><br>
 		Span2 : <input type="text" name="span2" placeholder="span2" value="span2"><br>
 		Thumb forward : <input type="text" name="thumbForward" placeholder="thumbForward" value="thumbForward"><br>
@@ -40,7 +50,8 @@
 		작성/수정일 : 2020-01-15<br>
 		<input type="submit" value="수정하기">
 	</form>
-		
-		
+
+
 </body>
+
 </html>

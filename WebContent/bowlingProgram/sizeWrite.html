@@ -12,12 +12,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
 	
 	<!-- 로컬 CSS Import -->
-	<link rel="stylesheet" type="text/css" href="css/sizeWrite.css">
+	<link rel="stylesheet" type="text/css" href="css/sizeForm.css">
 	
 </head>
 
 <body>
-	<button type="submit" class="ui secondary button homeButton" formaction="list">홈으로</button>
+	<button type="button" onclick="location.href='index.html'" class="ui secondary button homeButton" formaction="list">홈으로</button>
 		<form action="sizeSave" method="post">
 			<input type="hidden" name="userNo" value="${sessionScope.userNo}">
 			
