@@ -1,38 +1,60 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>볼링 지공차트 관리</title>
+    <meta property="og:title" content="볼링장 지공차트 관리" />
+    <meta
+      property="og:description"
+      content="지공차트 관리 이제 쉽게 시작해보세요 :)"
+    />
+    <meta property="og:image" content="https://i.ibb.co/0QNdsyx/1-01.png" />
+    <link rel="icon" href="https://i.ibb.co/xMyHnjN/01.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>왕궁볼링장 로그인 페이지</title>
-	<link rel="stylesheet" href="css/style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=0.9" />
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-</head>
-
-<body>
-	<form action="login" method="post">
-		<div class="wrapper">
-			<div id="pins"></div>
-			<div class="form-signin">
-				<h2 class="form-signin-heading">LOGIN</h2><br>
-					<div class="textInput">
-						<input type="text" name="aId" class="form-control" id="id" />
-						<label for="id">아이디를 입력하세요</label>
-					</div>
-					<div class="textInput">
-						<input type="password" name="aPw" class="form-control" id="pw" />
-						<label for="pw">비밀번호를 입력하세요</label>
-					</div>
-					<button class="btn btn-lg" type="submit">로그인</button>
-					<!-- 리스트보기 버튼 추가(html에서만) -->
-					<button class="btn btn-lg" type="button" onclick="location.href='list.html'" style="margin-top: 0;">리스트보기</button>
-					<input class="btn btn__signup" type="button" value="회원가입" onclick="location.href='joinForm.html'" />
-					<input class="btn btn__pwfind" type="button" value="비밀번호찾기" onclick="location.href='findPw.html'" />
-				</div>
-			</div>
-	</form>
-	<script type="text/javascript" src="script/form.js"></script>
-</body>
-
+  <body>
+    <form action="login" method="post">
+      <div class="wrapper">
+        <div id="pins"></div>
+        <div class="form-signin">
+          <h2 class="form-signin-heading">LOGIN</h2>
+          <br />
+          <div class="textInput">
+            <input type="text" name="aId" class="form-control" id="id" />
+            <label for="id">아이디를 입력하세요</label>
+          </div>
+          <div class="textInput">
+            <input type="password" name="aPw" class="form-control" id="pw" />
+            <label for="pw">비밀번호를 입력하세요</label>
+          </div>
+          <button class="btn btn-lg" type="submit">로그인</button>
+          <!-- 리스트보기 버튼 추가(html에서만) -->
+          <button
+            class="btn btn-lg"
+            type="button"
+            onclick="location.href='list.html'"
+            style="margin-top: 0"
+          >
+            리스트보기
+          </button>
+          <input
+            class="btn btn__signup"
+            type="button"
+            value="회원가입"
+            onclick="location.href='joinForm.html'"
+          />
+          <input
+            class="btn btn__pwfind"
+            type="button"
+            value="비밀번호찾기"
+            onclick="location.href='findPw.html'"
+          />
+        </div>
+      </div>
+    </form>
+    <script type="text/javascript" src="script/form.js"></script>
+  </body>
 </html>
