@@ -1,250 +1,330 @@
 <!DOCTYPE html>
 <html>
-<!-- head태그 시작 -->
-<head>
-<!--- basic page needs
+  <!-- head태그 시작 -->
+  <head>
+    <!--- basic page needs
     ================================================== -->
-<meta charset="utf-8">
-<title>Typerite</title>
-<meta name="description" content="">
-<meta name="author" content="">
+    <meta charset="utf-8" />
+    <title>동네 청원 대나무숲</title>
+    <meta property="og:title" content="동네 청원 By TeamSYJ" />
+    <meta property="og:description" content="우리 동네 실시간 청원 플랫폼" />
+    <meta
+      property="og:image"
+      content="https://i.ibb.co/y00gVpv/logo1233-01-01.png"
+    />
+    <link rel="icon" href="https://i.ibb.co/pxf5znq/SJYFvicon-01.png" />
 
-<!-- mobile specific metas
+    <!-- mobile specific metas
     ================================================== -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!-- CSS
+    <!-- CSS
     ================================================== -->
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/vendor.css">
-<link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/vendor.css" />
+    <link rel="stylesheet" href="css/main.css" />
 
-<!-- favicons
+    <!-- favicons
     ================================================== -->
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
-<!-- view
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <!-- view
     ================================================== -->
-<link rel="stylesheet" href="css/vuestyle.css">
-<link rel="stylesheet" href="css/faq.css">
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/login.js"></script>
-<script>
-	function printClock() {
+    <link rel="stylesheet" href="css/vuestyle.css" />
+    <link rel="stylesheet" href="css/faq.css" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/login.js"></script>
+    <script>
+      function printClock() {
+        var clock = document.getElementById("clock1234"); // 출력할 장소 선택
+        var currentDate = new Date(); // 현재시간
+        var calendar =
+          currentDate.getFullYear() +
+          "-" +
+          (currentDate.getMonth() + 1) +
+          "-" +
+          currentDate.getDate(); // 현재 날짜
+        var amPm = "AM"; // 초기값 AM
+        var currentHours = addZeros(currentDate.getHours(), 2);
+        var currentMinute = addZeros(currentDate.getMinutes(), 2);
+        var currentSeconds = addZeros(currentDate.getSeconds(), 2);
 
-		var clock = document.getElementById("clock1234"); // 출력할 장소 선택
-		var currentDate = new Date(); // 현재시간
-		var calendar = currentDate.getFullYear() + "-"
-				+ (currentDate.getMonth() + 1) + "-" + currentDate.getDate() // 현재 날짜
-		var amPm = 'AM'; // 초기값 AM
-		var currentHours = addZeros(currentDate.getHours(), 2);
-		var currentMinute = addZeros(currentDate.getMinutes(), 2);
-		var currentSeconds = addZeros(currentDate.getSeconds(), 2);
+        if (currentHours >= 12) {
+          // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
+          amPm = "PM";
+          currentHours = addZeros(currentHours - 12, 2);
+        }
 
-		if (currentHours >= 12) { // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
-			amPm = 'PM';
-			currentHours = addZeros(currentHours - 12, 2);
-		}
+        if (currentSeconds >= 50) {
+          // 50초 이상일 때 색을 변환해 준다.
+          currentSeconds =
+            '<span style="color:#de1951;">' + currentSeconds + "</span>";
+        }
+        clock.innerHTML =
+          currentHours +
+          ":" +
+          currentMinute +
+          ":" +
+          currentSeconds +
+          " <span style='font-size:20px;'>" +
+          amPm +
+          "</span><br><span>실시간 청원</span>"; //날짜를 출력해 줌
 
-		if (currentSeconds >= 50) {// 50초 이상일 때 색을 변환해 준다.
-			currentSeconds = '<span style="color:#de1951;">' + currentSeconds
-					+ '</span>'
-		}
-		clock.innerHTML = currentHours + ":" + currentMinute + ":"
-				+ currentSeconds + " <span style='font-size:20px;'>" + amPm
-				+ "</span><br><span>실시간 청원</span>"; //날짜를 출력해 줌
+        setTimeout("printClock()", 1000); // 1초마다 printClock() 함수 호출
+      }
 
-		setTimeout("printClock()", 1000); // 1초마다 printClock() 함수 호출
-	}
+      function addZeros(num, digit) {
+        // 자릿수 맞춰주기
+        var zero = "";
+        num = num.toString();
+        if (num.length < digit) {
+          for (i = 0; i < digit - num.length; i++) {
+            zero += "0";
+          }
+        }
+        return zero + num;
+      }
+    </script>
+  </head>
 
-	function addZeros(num, digit) { // 자릿수 맞춰주기
-		var zero = '';
-		num = num.toString();
-		if (num.length < digit) {
-			for (i = 0; i < digit - num.length; i++) {
-				zero += '0';
-			}
-		}
-		return zero + num;
-	}
-</script>
-</head>
-
-<!-- head태그 끝 -->
-<body onload="printClock()">
-	<!-- 사이드 메뉴 시작 -->
-<!-- preloader
+  <!-- head태그 끝 -->
+  <body onload="printClock()">
+    <!-- 사이드 메뉴 시작 -->
+    <!-- preloader
     ================================================== -->
-<div id="preloader">
-	<div id="loader" class="dots-fade">
-		<div></div>
-		<div></div>
-		<div></div>
-	</div>
-</div>
+    <div id="preloader">
+      <div id="loader" class="dots-fade">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
 
-<div id="top" class="s-wrap site-wrapper">
-
-	<!-- site header
+    <div id="top" class="s-wrap site-wrapper">
+      <!-- site header
         ================================================== -->
-	<header class="s-header">
+      <header class="s-header">
+        <div class="header__top">
+          <div class="header__logo">
+            <a class="site-logo" href="index.jsp">
+              <img src="images/logo1233.png" alt="Homepage" />
+            </a>
+          </div>
+          <div class="header__search">
+            <form
+              role="search"
+              method="get"
+              class="header__search-form"
+              action="#"
+            >
+              <label>
+                <span class="hide-content">청원 검색 하기 :</span>
+                <input
+                  type="search"
+                  class="header__search-field"
+                  placeholder="Type Keywords"
+                  value=""
+                  name="s"
+                  title="Search for:"
+                  autocomplete="off"
+                />
+              </label>
+              <input
+                type="submit"
+                class="header__search-submit"
+                value="Search"
+              />
+            </form>
+            <a href="#0" title="Close Search" class="header__search-close"
+              >닫기</a
+            >
+          </div>
+          <!-- end header__search -->
 
-		<div class="header__top">
-			<div class="header__logo">
-				<a class="site-logo" href="index.jsp">
-					<img src="images/logo1233.png" alt="Homepage">
-				</a>
-			</div>
-			<div class="header__search">
-				<form role="search" method="get" class="header__search-form"
-					action="#">
-					<label> <span class="hide-content">청원 검색 하기 :</span> <input
-						type="search" class="header__search-field"
-						placeholder="Type Keywords" value="" name="s" title="Search for:"
-						autocomplete="off">
-					</label> <input type="submit" class="header__search-submit" value="Search">
-				</form>
-				<a href="#0" title="Close Search" class="header__search-close">닫기</a>
-			</div>
-			<!-- end header__search -->
+          <!-- toggles -->
+          <a href="#0" class="header__search-trigger"></a>
+          <a href="#0" class="header__menu-toggle"><span>Menu</span></a>
+        </div>
+        <!-- end header__top -->
 
-			<!-- toggles -->
-			<a href="#0" class="header__search-trigger"></a> <a href="#0"
-				class="header__menu-toggle"><span>Menu</span></a>
+        <nav class="header__nav-wrap">
+          <ul class="header__nav">
+            <li class="current has-children">
+              <a href="index.jsp" title="">대나무숲 입장 하기</a>
+              <ul class="sub-menu">
+                <li><a href="login.jsp">로그인</a></li>
+                <li><a href="join_test.jsp">회원 가입</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#0" title="">대나무숲 청원</a>
+              <ul class="sub-menu">
+                <li><a href="board.jsp">실시간 청원</a></li>
+                <li><a href="loc_board.jsp">지역별 청원</a></li>
+                <li><a href="exp_board.jsp">만료된 청원</a></li>
+                <li><a href="answer_board.jsp">답변된 청원</a></li>
+                <li><a href="faq.jsp">대나무숲 청원 FAQ</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#0" title="">청원 하기</a>
+              <ul class="sub-menu">
+                <li><a href="writeForm.jsp">지금 청원 하기</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="page-about.html" title="">대나무 숲</a>
+              <ul class="sub-menu">
+                <li><a href="img_storage.html">사진 자료실</a></li>
+                <li><a href="video_storage.html">동영상 자료실</a></li>
+                <li><a href="Advertising.html">지역별 소식 보기</a></li>
+                <li><a href="status.html">청원 진행 과정</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- end header__nav -->
 
-		</div>
-		<!-- end header__top -->
+          <ul class="header__social">
+            <li class="ss-facebook">
+              <a href="https://facebook.com/">
+                <span class="screen-reader-text">Facebook</span>
+              </a>
+            </li>
+            <li class="ss-twitter">
+              <a href="#0"> <span class="screen-reader-text">Twitter</span> </a>
+            </li>
+            <li class="ss-dribbble">
+              <a href="#0">
+                <span class="screen-reader-text">Dribbble</span>
+              </a>
+            </li>
+            <li class="ss-pinterest">
+              <a href="#0"> <span class="screen-reader-text">Behance</span> </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- end header__nav-wrap -->
+      </header>
+      <!-- end s-header -->
 
-		<nav class="header__nav-wrap">
+      <!-- 사이드 메뉴 끝  -->
+      <div class="s-content">
+        <h2>청원 F A Q</h2>
+        <div class="line"></div>
+        <hr />
+        <div class="faq-content">
+          <div class="faq-question">
+            <input id="q1" type="checkbox" class="panel" />
+            <label for="q1" class="panel-title"
+              >Q. 국민청원 어떻게 참여하나요?</label
+            >
+            <div class="panel-content">
+              <ul>
+                <li>
+                  누구라도 트위터, 페이스북, 네이버, 카카오 중 보유 계정으로
+                  소셜로그인을 통해 직접 청원글을 작성하거나, 진행 중인 청원에
+                  동의하실 수 있습니다. 한 번 작성하거나 동의한 청원에 대해서는
+                  삭제나 철회하실 수 없습니다.
+                </li>
+                <li>
+                  홈페이지에 공개된 청원은 누구나 자유롭게 열람할 수 있습니다.
+                </li>
+              </ul>
+            </div>
+          </div>
 
-			<ul class="header__nav">
-				<li class="current has-children"><a href="index.jsp" title="">대나무숲
-						입장 하기</a>
-					<ul class="sub-menu">
-						<li><a href="login.jsp">로그인</a></li>
-						<li><a href="join_test.jsp">회원 가입</a></li>
-					</ul></li>
-				<li class="has-children"><a href="#0" title="">대나무숲 청원</a>
-					<ul class="sub-menu">
-						<li><a href="board.jsp">실시간 청원</a></li>
-						<li><a href="loc_board.jsp">지역별 청원</a></li>
-						<li><a href="exp_board.jsp">만료된 청원</a></li>
-						<li><a href="answer_board.jsp">답변된 청원</a></li>
-						<li><a href="faq.jsp">대나무숲 청원 FAQ</a></li>
-					</ul></li>
-				<li class="has-children"><a href="#0" title="">청원 하기</a>
-					<ul class="sub-menu">
-						<li><a href="writeForm.jsp">지금 청원 하기</a></li>
-					</ul></li>
-				<li class="has-children"><a href="page-about.html" title="">대나무
-						숲</a>
-					<ul class="sub-menu">
-						<li><a href="img_storage.html">사진 자료실</a></li>
-						<li><a href="video_storage.html">동영상 자료실</a></li>
-						<li><a href="Advertising.html">지역별 소식 보기</a></li>
-						<li><a href="status.html">청원 진행 과정</a></li>
-					</ul></li>
-			</ul>
-			<!-- end header__nav -->
+          <div class="faq-question">
+            <input id="q2" type="checkbox" class="panel" />
+            <label for="q2" class="panel-title"
+              >Q. 국민청원 게시글 어떻게 작성하나요?</label
+            >
+            <div class="panel-content">
+              <ul>
+                <li>
+                  새 청원글 작성 전, 진행 중인 청원을 먼저 검색하시면 유사한
+                  청원이 게시되었는지 확인하실 수 있습니다. 새로운 청원글을
+                  작성하는 대신 기존유사 청원에 동참하시면 국민의 뜻을 한 곳으로
+                  모으는데 도움이 됩니다.
+                </li>
+                <li>
+                  새 청원글 작성 시, 내용을 대표하는 제목 및 관련 분야를
+                  선택하신 후 내용을 입력해주시면 됩니다.
+                </li>
+                <li>
+                  청원 내용과 관련 있는 웹사이트 또는 영상 URL이 있다면
+                  첨부해주시기 바랍니다.
+                </li>
+                <li>
+                  청원 내용의 주요 키워드를 태그란에 입력해주시면 다른
+                  참여자들이 여러분들의 청원을 쉽게 찾는 데 도움이 됩니다.
+                </li>
+                <li>
+                  마지막으로, 입력하신 모든 내용을 신중하게 검토한 뒤 청원을
+                  등록해주시기 바랍니다. 한번 작성된 청원은 수정 및 삭제가
+                  불가능합니다. 최초 청원 취지와 다른 내용으로 변경되는 것을
+                  방지하기 위한 것이니 신중한 작성 부탁드립니다.
+                </li>
+              </ul>
+            </div>
+          </div>
 
-			<ul class="header__social">
-				<li class="ss-facebook"><a href="https://facebook.com/"> <span
-						class="screen-reader-text">Facebook</span>
-				</a></li>
-				<li class="ss-twitter"><a href="#0"> <span
-						class="screen-reader-text">Twitter</span>
-				</a></li>
-				<li class="ss-dribbble"><a href="#0"> <span
-						class="screen-reader-text">Dribbble</span>
-				</a></li>
-				<li class="ss-pinterest"><a href="#0"> <span
-						class="screen-reader-text">Behance</span>
-				</a></li>
-			</ul>
+          <div class="faq-question">
+            <input id="q3" type="checkbox" class="panel" />
+            <label for="q3" class="panel-title"
+              >Q. 국민청원 게시판에 공개되기 위해서는 '100명의 사전동의'가
+              필요합니다.</label
+            >
+            <div class="panel-content">
+              <ul>
+                <li>
+                  청원글 작성 완료 시, 여러분에게 ‘사전동의 링크(URL)’가
+                  부여됩니다.
+                </li>
+                <li>
+                  30일 이내에 여러분의 청원을 지지하는 100명의 사전 동의를
+                  받으셔야 청원게시판에 청원 내용이 공개되어 더 많은 국민께서
+                  청원에 동참하실 수 있게 됩니다.
+                </li>
+                <li>
+                  ‘사전동의 링크(URL)’를 SNS 등에 공유해 사전 동의를 받아주세요.
+                  사전 동의는 제공된 ‘사전동의 링크(URL)’를 통해서만 가능합니다.
+                  100명의 사전 동의를 받은 청원은 관리자의 검토를 거쳐
+                  청원게시판에 공개됩니다. 단, 국민청원 요건에 맞지 않는 청원은
+                  100명의 동의를 받더라도 게시판에 공개되지 않거나 관리자에 의해
+                  일부 내용이 '숨김' 처리될 수 있습니다.
+                </li>
+                <li>
+                  ‘사전동의 링크(URL)’를 잊으셨거나 등록한 청원 동의 수가
+                  궁금하시다면 청와대 홈페이지 > 국민청원 > 내 청원 보기를 통해
+                  확인하실 수 있습니다.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footerParts 시작 -->
+    <footer class="s-footer">
+      <div class="row">
+        <div class="column large-full footer__content">
+          <div class="footer__copyright">
+            <span>© Copyright TeamSYJ 2019</span>
+          </div>
+        </div>
+      </div>
 
-		</nav>
-		<!-- end header__nav-wrap -->
-	</header>
-	<!-- end s-header -->
-
-	<!-- 사이드 메뉴 끝  -->
-	<div class="s-content">
-		<h2>청원 F A Q</h2>
-		<div class="line"></div>
-		<hr>
-		<div class="faq-content">
-			<div class="faq-question">
-				<input id="q1" type="checkbox" class="panel">
-				<label for="q1" class="panel-title">Q. 국민청원 어떻게 참여하나요?</label>
-				<div class="panel-content">
-					<ul>
-						<li>누구라도 트위터, 페이스북, 네이버, 카카오 중 보유 계정으로 소셜로그인을 통해 직접 청원글을
-							작성하거나, 진행 중인 청원에 동의하실 수 있습니다. 한 번 작성하거나 동의한 청원에 대해서는 삭제나 철회하실 수
-							없습니다.</li>
-						<li>홈페이지에 공개된 청원은 누구나 자유롭게 열람할 수 있습니다.</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="faq-question">
-				<input id="q2" type="checkbox" class="panel">
-				<label for="q2" class="panel-title">Q. 국민청원 게시글 어떻게 작성하나요?</label>
-				<div class="panel-content">
-					<ul>
-						<li>새 청원글 작성 전, 진행 중인 청원을 먼저 검색하시면 유사한 청원이 게시되었는지 확인하실 수
-							있습니다. 새로운 청원글을 작성하는 대신 기존유사 청원에 동참하시면 국민의 뜻을 한 곳으로 모으는데 도움이 됩니다.</li>
-						<li>새 청원글 작성 시, 내용을 대표하는 제목 및 관련 분야를 선택하신 후 내용을 입력해주시면 됩니다.</li>
-						<li>청원 내용과 관련 있는 웹사이트 또는 영상 URL이 있다면 첨부해주시기 바랍니다.</li>
-						<li>청원 내용의 주요 키워드를 태그란에 입력해주시면 다른 참여자들이 여러분들의 청원을 쉽게 찾는 데 도움이
-							됩니다.</li>
-						<li>마지막으로, 입력하신 모든 내용을 신중하게 검토한 뒤 청원을 등록해주시기 바랍니다. 한번 작성된 청원은
-							수정 및 삭제가 불가능합니다. 최초 청원 취지와 다른 내용으로 변경되는 것을 방지하기 위한 것이니 신중한 작성
-							부탁드립니다.</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="faq-question">
-				<input id="q3" type="checkbox" class="panel">
-				<label for="q3" class="panel-title">Q. 국민청원 게시판에 공개되기 위해서는 '100명의
-					사전동의'가 필요합니다.</label>
-				<div class="panel-content">
-					<ul>
-						<li>청원글 작성 완료 시, 여러분에게 ‘사전동의 링크(URL)’가 부여됩니다.</li>
-						<li>30일 이내에 여러분의 청원을 지지하는 100명의 사전 동의를 받으셔야 청원게시판에 청원 내용이
-							공개되어 더 많은 국민께서 청원에 동참하실 수 있게 됩니다.</li>
-						<li>‘사전동의 링크(URL)’를 SNS 등에 공유해 사전 동의를 받아주세요. 사전 동의는 제공된 ‘사전동의
-							링크(URL)’를 통해서만 가능합니다. 100명의 사전 동의를 받은 청원은 관리자의 검토를 거쳐 청원게시판에
-							공개됩니다. 단, 국민청원 요건에 맞지 않는 청원은 100명의 동의를 받더라도 게시판에 공개되지 않거나 관리자에 의해
-							일부 내용이 '숨김' 처리될 수 있습니다.</li>
-						<li>‘사전동의 링크(URL)’를 잊으셨거나 등록한 청원 동의 수가 궁금하시다면 청와대 홈페이지 > 국민청원
-							> 내 청원 보기를 통해 확인하실 수 있습니다.</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	</div>
-	<!-- footerParts 시작 -->
-<footer class="s-footer">
-	<div class="row">
-		<div class="column large-full footer__content">
-			<div class="footer__copyright">
-				<span>© Copyright TeamSYJ 2019</span>
-			</div>
-		</div>
-	</div>
-
-	<div class="go-top">
-		<a class="smoothscroll" title="Back to Top" href="#top"></a>
-	</div>
-</footer>
-	<!-- footerParts 끝 -->
-	<!-- Java Script
+      <div class="go-top">
+        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+      </div>
+    </footer>
+    <!-- footerParts 끝 -->
+    <!-- Java Script
     ================================================== -->
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/plugins.js"></script>
-	<script src="js/main.js"></script>
-</body>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
