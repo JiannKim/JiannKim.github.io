@@ -8,30 +8,42 @@
   text-decoration: none;
 }
 body {
+  min-height: 100%;
   padding: 30px;
+  background: linear-gradient(to bottom right, #e66465, #9198e5);
+  background-repeat: no-repeat;
 }
 ul {
   display: flex;
   justify-content: space-between;
-  max-width: 800px;
+  max-width: 900px;
+  min-width: 700px;
   margin: 0 auto;
   padding: 50px;
 }
 .key {
   border: 1px solid lightgray;
   border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
   width: 70px;
   height: 70px;
   display: flex;
   flex-flow: column;
   justify-content: center;
+  transition: all 0.7s;
 }
 .key span {
   margin-top: 10px;
   font-size: 13px;
   color: #787878;
 }
-.key:hover {
+/* .key:hover {
   box-shadow: 0 0 10px greenyellow;
   border-radius: 3px;
+} */
+.playing {
+  border: 1px solid greenyellow;
+  box-shadow: 0 0 10px greenyellow;
+  /* border-radius: 3px; */
+  transform: scale(1.03);
 }

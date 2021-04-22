@@ -76,20 +76,34 @@
       ></audio>
       <audio
         data-key="76"
-        src="https://limeprj.xyz:2501/api/get/file/userFile_1619011505634.mp3"
+        src="https://limeprj.xyz:2501/api/get/file/userFile_1619011456634.mp3"
       ></audio>
       <audio
         data-key="186"
-        src="https://limeprj.xyz:2501/api/get/file/userFile_1619011456634.mp3"
+        src="https://limeprj.xyz:2501/api/get/file/userFile_1619011505634.mp3"
       ></audio>
     </div>
     <footer>
       <p>👍 재미있으셨다면 좋아요와 구독 꿋! 👍</p>
     </footer>
     <script>
-      window.addEventListener("keydown", (e) => {
-        console.log(e, "this is keyDown!");
-      });
+      function playSound(e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+        if (!audio) return;
+        audio.currentTime = 0; // 사운드가 끝나기전에 재시도(연타가능)
+        audio.play();
+        key.classList.add("playing");
+      }
+      function removeTransition(e) {
+        if (e.propertyName !== "transform") return; // 변화가 없으면 건너뛰기
+        this.classList.remove("playing");
+      }
+      const keys = document.querySelectorAll(".key");
+      keys.forEach((key) =>
+        key.addEventListener("transitionend", removeTransition)
+      );
+      window.addEventListener("keydown", playSound);
     </script>
   </body>
 </html>
