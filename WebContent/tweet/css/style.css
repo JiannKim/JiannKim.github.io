@@ -37,10 +37,6 @@ ul {
   font-size: 13px;
   color: #787878;
 }
-/* .key:hover {
-  box-shadow: 0 0 10px greenyellow;
-  border-radius: 3px;
-} */
 .playing {
   border: 1px solid greenyellow;
   box-shadow: 0 0 10px greenyellow;
