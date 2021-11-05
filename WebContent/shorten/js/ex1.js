@@ -24,16 +24,20 @@ const shortenUrl = () => {
   xhr.send(data);
 }
 
-// 붐버튼 마우스 오버 효과
+// 붐버튼 마우스 클릭 효과
 const p = document.querySelector('#shorten');
-p.onmouseover = mov;
-p.onmouseout = mot;
+p.onmousedown = mov;
+p.onmouseleave = mot;
 
 function mov() {
-    p.innerHTML = 'B💥💥💥M!';
+  p.innerHTML = 'B 💥 💥 💥 M!';
+  p.style.color = "blueviolet";
+  p.style.backgroundColor = "rgba(251, 255, 17, 0.884)";
 }
 function mot() {
-    p.innerHTML = 'B💣💣💣M!';
+  p.innerHTML = '💣 💣 💣';
+  p.style.color = "rgba(251, 255, 17, 0.884)";
+  p.style.backgroundColor = "blueviolet";
 }
 
 // active efect

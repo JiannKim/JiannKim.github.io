@@ -56,7 +56,7 @@ h1 {
 
 #shorten {
     all: unset;
-    width: 170px;
+    width: 190px;
     margin: 0 auto;
     background-color: blueviolet;
     padding: 15px;
@@ -67,7 +67,7 @@ h1 {
     font-weight: bold;
 }
 
-#shorten:hover {
+#shorten:active {
     color: blueviolet;
     background-color: rgba(251, 255, 17, 0.884);
     /* background: #eb1f48; */
@@ -95,7 +95,7 @@ h1 {
     position: absolute;
     background: #eb1f48;
     border-radius: 5px;
-    height: 10px;
+    height: 8px;
 }
 
 .frills:after, .frills:before {
@@ -104,11 +104,11 @@ h1 {
 }
 
 .frills:before {
-    bottom: 45px;
+    bottom: 20px;
 }
 
 .frills:after {
-    top: 45px;
+    top: 20px;
 }
 
 .left-frills {
@@ -182,12 +182,12 @@ h1 {
             transform: none;
     }
     65% {
-    -webkit-transform: translateX(-80px);
-            transform: translateX(-80px);
+    -webkit-transform: translateX(-70px);
+            transform: translateX(-70px);
     }
     100% {
-    -webkit-transform: translateX(-80px);
-            transform: translateX(-80px);
+    -webkit-transform: translateX(-70px);
+            transform: translateX(-70px);
     }
 }
 @-webkit-keyframes move-right {
@@ -196,12 +196,12 @@ h1 {
             transform: none;
     }
     65% {
-    -webkit-transform: translateX(80px);
-            transform: translateX(80px);
+    -webkit-transform: translateX(70px);
+            transform: translateX(70px);
     }
     100% {
-    -webkit-transform: translateX(80px);
-            transform: translateX(80px);
+    -webkit-transform: translateX(70px);
+            transform: translateX(70px);
     }
 }
 @keyframes move-right {
@@ -210,48 +210,48 @@ h1 {
             transform: none;
     }
     65% {
-    -webkit-transform: translateX(80px);
-            transform: translateX(80px);
+    -webkit-transform: translateX(70px);
+            transform: translateX(70px);
     }
     100% {
-    -webkit-transform: translateX(80px);
-            transform: translateX(80px);
+    -webkit-transform: translateX(70px);
+            transform: translateX(70px);
     }
 }
 @-webkit-keyframes width-to-zero {
     0% {
-    width: 38px;
+    width: 28px;
     }
     100% {
-    width: 8px;
+    width: 1px;
     }
 }
 @keyframes width-to-zero {
     0% {
-    width: 38px;
+    width: 28px;
     }
     100% {
-    width: 8px;
+    width: 1px;
     }
 }
 @-webkit-keyframes move-up {
     100% {
-    bottom: 69.75px;
+    bottom: 39.75px;
     }
 }
 @keyframes move-up {
     100% {
-    bottom: 69.75px;
+    bottom: 39.75px;
     }
 }
 @-webkit-keyframes move-down {
     100% {
-    top: 69.75px;
+    top: 39.75px;
     }
 }
 @keyframes move-down {
     100% {
-    top: 69.75px;
+    top: 39.75px;
     }
 }
 
