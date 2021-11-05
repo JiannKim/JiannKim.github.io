@@ -236,22 +236,22 @@ h1 {
 }
 @-webkit-keyframes move-up {
     100% {
-    bottom: 39.75px;
+    bottom: 59.75px;
     }
 }
 @keyframes move-up {
     100% {
-    bottom: 39.75px;
+    bottom: 59.75px;
     }
 }
 @-webkit-keyframes move-down {
     100% {
-    top: 39.75px;
+    top: 59.75px;
     }
 }
 @keyframes move-down {
     100% {
-    top: 39.75px;
+    top: 59.75px;
     }
 }
 
